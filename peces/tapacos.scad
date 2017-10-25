@@ -1,0 +1,49 @@
+use <servo.scad>
+$fn=120;  
+difference()
+{
+  union()
+  {
+    cube([110,60,5]);
+    translate([55-20.45/2,54])cube([20.45,6,15]);
+  }
+  translate([55,45,15])rotate([-90,0,0])cylinder(r=10.5,h=20);
+  translate([5,5,2])cube([40,40,6]);
+  translate([30,-1,2])cube([10,40,6]);
+  translate([110-40,-1,2])cube([10,40,6]);
+  translate([55-20,10,2])cube([40,40,6]);
+  translate([110-45,5,2])cube([40,40,6]);
+}
+//Fixacions al cos
+difference()
+{
+  union()
+  {
+    translate([55,0,5])rotate([-90,0,0])cylinder(r=10,h=3);
+    translate([87.5,57,5])rotate([-90,0,0])cylinder(r=10,h=3);
+    translate([22.5,57,5])rotate([-90,0,0])cylinder(r=10,h=3);
+    translate([55,6,0])rotate([90,90,0])difference()
+    {
+      translate([-14,-3.25])cube([14,6.5,4.1]);
+      translate([-14,0,-1])cylinder(r=3.5,h=7);
+    }
+  }
+  translate([0,-1,-15])cube([110,65,15]);
+  translate([22.5,46.5,8])rotate([-90,0,0])cylinder(r=1.25,h=14);
+  translate([87.5,46.5,8])rotate([-90,0,0])cylinder(r=1.25,h=14);
+  translate([55,-1,8])rotate([-90,0,0])cylinder(r=1.25,h=15);
+  translate([22.5,58,8])rotate([-90,0,0])cylinder(r=3,h=14);
+  translate([87.5,58,8])rotate([-90,0,0])cylinder(r=3,h=14);
+  translate([55,-13,8])rotate([-90,0,0])cylinder(r=3,h=15);
+
+}
+difference()
+{
+  translate([105,8.5,0])cube([5,13,18]);
+  translate([65,15,15])rotate([0,90])cylinder(r=7,h=50,$fn=90);
+}
+difference()
+{
+  translate([0,8.5,0])cube([5,13,18]);
+  translate([-1,15,15])rotate([0,90])cylinder(r=7,h=50,$fn=90);
+}

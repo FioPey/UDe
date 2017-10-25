@@ -1,0 +1,22 @@
+use <servo.scad>
+$fn=90;
+hull()
+{
+    translate([110-2*35,0,0])cylinder(r=35,h=5);
+    cylinder(r=35,h=5);
+}
+difference()
+{
+    union()
+    {
+        translate([-5,25,20])rotate([0,90,0])cylinder(r=5,h=50);
+        translate([-5,25,0])cube([50,5,20]);
+        translate([-5,25,5])rotate([0,90,0])difference()
+        {
+            cylinder(r=20,h=50);
+            translate([0,-20,-5])cube([50,50,60]);
+            translate([-40,0,-5])cube([50,50,60]);
+        }
+    }
+    translate([0,25,5])rotate([90,0,0])servo(false);
+}

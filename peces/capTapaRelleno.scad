@@ -1,0 +1,19 @@
+
+$fn=90;
+difference()
+{
+    translate([0,0,22])sphere(23);
+    translate([-11.5,0,0])union()
+    {
+          translate([-20,-2.5,15])cube([23,5,5]);
+          translate([-19,0,15+12.5+1.5])rotate([0,90,0])
+          {
+              cylinder(r=10,h=20);
+          }
+    }
+    translate([-11.5,-25,-1])cube([50,50,50]);
+    translate([-13,15,20])rotate([0,90])cylinder(r=0.75,h=10);
+    translate([-22,15,20])rotate([0,90])cylinder(r=2.5,h=10);
+    translate([-13,-15,20])rotate([0,90])cylinder(r=0.75,h=10);
+    translate([-22,-15,20])rotate([0,90])cylinder(r=2.5,h=10);
+}

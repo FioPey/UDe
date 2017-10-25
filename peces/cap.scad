@@ -1,0 +1,29 @@
+
+$fn=90;
+difference()
+{
+    union()
+    {
+        translate([0,0,29])sphere(30);
+        translate([-1.25,0,15+12.5+1.5])rotate([-90,0])cylinder(r=7.5,h=40);
+        translate([-11.5,40,15+12.5+1.5])rotate([0,90,0])
+        cylinder(r=7.5,h=20);
+    }
+    translate([-11.5,0,0])union()
+    {
+          translate([0,-6.15,-5])cube([23,12.3,20]);
+          translate([0,-2.5,15])cube([23,5,1.5]);
+          translate([0,0,15+12.5+1.5])rotate([0,90,0])
+          {
+              cylinder(r=12.5,h=5);
+              cylinder(r=7.5,h=16);
+              cylinder(r=7.5,h=16);
+          }
+    }
+    translate([16,0,15+12.5+1.5])sphere(20);
+    translate([-61.5-20,-35,-2])cube([70,70,70]);
+    translate([-13,15,20])rotate([0,90])cylinder(r=0.75,h=10);
+    translate([-13,-15,20])rotate([0,90])cylinder(r=0.75,h=10);
+    translate([-11.5,40,15+12.5+1.5])rotate([0,90,0])translate([0,0,-1])cylinder(r=4.5,h=22);
+
+}

@@ -1,0 +1,29 @@
+$fn=90;
+intersection()
+{
+    difference()
+    {
+        translate([-36,0,0])cube([72,36,6]);
+        translate([0,0,-1])cylinder(r=35,h=6);
+        translate([0,55])rotate([0,0,-90])
+        {
+            translate([36-2-13,36-6,-0.5])cube([13,6.5,7]);
+            translate([36-2-3,36-23,4])rotate([-90,0])cylinder(r=0.9,h=20);
+            translate([36-2-3-6.5,36-23,4])rotate([-90,0])cylinder(r=0.9,h=20);
+        }
+        translate([36-7,36-1,5+7])rotate([-90,0,180])
+        {
+            cube([13,6.5,7]);
+            translate([3,1,4])rotate([-90,0])cylinder(r=0.9,h=20);
+            translate([3+6.5,1,4])rotate([-90,0])cylinder(r=0.9,h=20);
+        }
+        translate([19.5,31,-1])cylinder(r=1.5,h=3);
+        translate([19.5+6.5,31,-1])cylinder(r=1.5,h=3);
+    }
+
+    union()
+    {
+          cylinder(r=37,h=7);
+          cube([39,39,7]);
+    }
+}
